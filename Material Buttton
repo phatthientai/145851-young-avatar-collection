@@ -1,0 +1,41 @@
+//Material buttons
+Adding resources
+Add the latest appcompat library to your project.
+
+dependencies {
+    //replace X.X.X with the latest version
+    compile 'com.android.support:appcompat-v7:X.X.X'
+}
+
+Make your activity extend AppCompatActivity.
+
+public class ButtonActivity extends AppCompatActivity {
+...
+}
+Add the button to the layout.
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/action_click_me" />
+At this point you’ll have the material button in your app.
+
+Styling
+To apply your custom colors you can define the button style in the styles.xml. Add colorButtonNormal and colorControlHighlight to your app theme. This will apply the same design for all buttons in the app.
+<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    ...
+    <item name="colorButtonNormal">@color/colorPrimary</item>
+    <item name="colorControlHighlight">@color/colorAccent</item>
+</style>
+If you want to style your buttons individually, create a button theme in your styles.xml …
+<style name="PrimaryButton" parent="Theme.AppCompat">
+    <item name="colorButtonNormal">@color/colorPrimary</item>
+    <item name="colorControlHighlight">@color/colorAccent</item>
+</style>
+and reference the theme on your button.
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/action_click_me"
+    android:theme="@style/PrimaryButton" />
+Alternatively you can set the background color by simply adding android:backgroundTint to your button directly if you target API 21+. But be aware that this isn’t going to work in older versions.
