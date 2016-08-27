@@ -1,0 +1,39 @@
+androidweekly.net
+realm.io/news/tags/android
+corner.squareup.com
+tech.trello.com
+
+android-developers.blogspot.com
+
+jake wharton
+dan lew
+
+
+//github, lib
+codepath
+android clean architech
+u2020
+quaility master
+
+
+//lib 
+jakewharton.github / butterknife
+retrofit (square)
+picasso
+google/gson
+rxjava, pxandroid, dagger
+
+
+//communities
+android chat slack
+kotlink lang
+androiddevsaigon
+
+
+
+
+//tips
+find a mentor
+learn by doing
+join communities
+write unit tests
