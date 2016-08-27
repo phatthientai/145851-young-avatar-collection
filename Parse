@@ -1,0 +1,12 @@
+Parse.initialize(new Parse.Configuration.Builder(this)
+        .applicationId("")
+        .clientKey("")
+        .server("https://parseapi.back4app.com/").build()
+);
+
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+
+
+
+    
