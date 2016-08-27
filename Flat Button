@@ -1,0 +1,17 @@
+//Flat button
+
+For using flat button, create a style for it in your styles.xml …
+
+<style name="PrimaryFlatButton" parent="Theme.AppCompat.Light">
+    <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+    <item name="colorControlHighlight">@color/colorAccent</item>
+    <item name="colorAccent">@color/colorPrimary</item>
+</style>
+
+and reference the style on your button.
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/button_normal"
+    android:theme="@style/PrimaryFlatButton" />
