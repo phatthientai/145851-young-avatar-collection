@@ -1,0 +1,4 @@
+int orientation = getResources().getConfiguration().orientation;
+if(orientation == Configuration.ORIENTATION_PORTRAIT){
+}else if (orientation == Configuration.ORIENTATION_LANDSCAPE){
+}
