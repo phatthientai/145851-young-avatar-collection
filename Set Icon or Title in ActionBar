@@ -1,0 +1,9 @@
+//if you use AppcombatActivity use getSupportActionBar().
+
+//setIcon
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.your_logo);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        
+//setTitle
+        getSupportActionBar().setTitle("Your title");
