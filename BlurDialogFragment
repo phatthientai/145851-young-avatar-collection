@@ -1,0 +1,51 @@
+public class MyDialogFragment extends SupportBlurDialogFragment {
+    private BlurDialogEngine myBlurEngine;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        myBlurEngine = new BlurDialogEngine(getActivity());
+        myBlurEngine.debug(true);
+        myBlurEngine.setBlurRadius(8);
+        myBlurEngine.setDownScaleFactor(8f);
+        myBlurEngine.setBlurActionBar(true);
+        myBlurEngine.setUseRenderScript(true);
+    }
+    public MyDialogFragment(){
+
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_dialog, container);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        getDialog().setTitle("Use Google's Location Service?");
+    }
+}
+
+
+
+
+
+
+////Main Activity
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        showMyDialog();
+    }
+
+    private void showMyDialog() {
+        FragmentManager fm = getSupportFragmentManager();
+        MyDialogFragment myDialog = new MyDialogFragment();
+        myDialog.show(fm,"tag");
+    }
+}
